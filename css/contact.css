@@ -67,7 +67,7 @@ nav{
 }
 .contact .content h2
 {
-  font-size: 36px;
+  font-size: 40px;
   font-weight: 500;
   color: rgb(0, 0, 0);
 }
@@ -82,11 +82,11 @@ nav{
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 30px;
+  margin-top: 50px;
 }
 .container .contactInfo
 {
-  width: 50%;
+  width: 30%;
   display: flex;
   flex-direction: column;
 }
@@ -112,15 +112,15 @@ nav{
 }
 .contactForm
 {
-  width: 30%;
-  padding: 40px;
+  width: 25%;
+  padding: 25px;
   background: rgb(255, 141, 236)
 }
 .contactForm h2
 {
   font-size: 30px;
   color: #333;
-  font-weight: 500;
+  font-weight: 600;
 }
 .contactForm .inputBox
 {
@@ -129,7 +129,6 @@ nav{
   margin-top: 25px;
 }
 .contactForm .inputBox input
-.contactForm .inputBox textarea
 {
   width: 100%;
   padding: 5px 0;
@@ -151,37 +150,52 @@ nav{
   transition: 0.5s;
   color: #666;
 }
-.contactForm .inputBox input:focus ~ span
+.contactForm .inputBox input:focus ~ span,
+.contactForm .inputBox input:valid ~ span,
+.contactForm .inputBox textarea:focus ~ span,
+.contactForm .inputBox textarea:valid ~ span
 {
   color: #391e63;
   font-size: 12px;
   transform: translateY(-20px);
 }
+.contactForm .inputBox input[type="submit"]
+{
+  width: 100px;
+  background: #000000;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 18px;
+}
+
+@media (max-width: 991px)
+{
+  .contact
+  {
+    padding: 50px;
+  }
+  .container
+  {
+    flex-direction: column;
+  }
+  .container .contactInfo
+  {
+    margin-bottom: 40px;
+  }
+  .container .contactInfo,
+  .contactForm
+  {
+    width: 100%;
+  }
+}
 
 .fa {
   padding: 20px;
   font-size: 30px;
-  width: 80px;
+  width: 30px;
   text-align: center;
   text-decoration: none;
-  margin: 5px 2px;
-}
-
-.fa:hover {
-    opacity: 0.7;
-}
-
-.fa-facebook {
-  background: #3B5998;
-  color: white;
-}
-
-.fa-twitter {
-  background: #55ACEE;
-  color: white;
-}
-
-.fa-instagram {
-  background: #ff8de3;
-  color: white;
+  border-radius: 50%;
 }
